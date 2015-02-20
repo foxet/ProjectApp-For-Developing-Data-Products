@@ -14,9 +14,8 @@ output:
 - server.R     # server file for application.
 - panel.png    # for README file
 
-Infomation can also be found  
+- Infomation can also be found: http://foxet.github.io/ProjectApp-For-Developing-Data-Products/README.html
 
-http://foxet.github.io/ProjectApp-For-Developing-Data-Products/README.html
 ----------------------------------------------------------
  
 ### Instructions:
@@ -32,6 +31,7 @@ http://foxet.github.io/ProjectApp-For-Developing-Data-Products/README.html
 - The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models)  
 ```{r echo=FALSE}
 data(mtcars)
+library(xtable)
 mtcarsdata<-data.frame(Names=names(mtcars),Description=c("Miles/(US) gallon",
                                            "Number of cylinders",
                                            "Displacement (cu.in.)",
@@ -43,7 +43,10 @@ mtcarsdata<-data.frame(Names=names(mtcars),Description=c("Miles/(US) gallon",
                                            'Transmission',
                                            'Number of forward gears',
                                            'Number of carburetors'))
-mtcarsdata
+
+```
+```{r echo=FALSE,results='asis'}
+print(xtable(mtcarsdata),type='html')
 ```
 
 ### Examples:
