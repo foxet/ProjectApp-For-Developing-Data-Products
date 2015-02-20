@@ -2,15 +2,18 @@
 title: "README"
 author: "Fan LIN"
 date: "2015-2-20"
-output: html_document
+output: pdf_document
 ---
 ### Submition file include:
 - README.html   # introduction and explain for the application
 - README.Rmd   # introduction and explain for the application
+- README.pdf   # introduction and explain for the application
 - ui.R         # ui file for application
 - server.R     # server file for application.
 - panel.png    # for README file
 
+Infomation can also be found
+http://foxet.github.io/ProjectApp-For-Developing-Data-Products/README.html
 ----------------------------------------------------------
  
 ### Instructions:
