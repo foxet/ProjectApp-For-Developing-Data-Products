@@ -1,11 +1,6 @@
----
-title: "README"
-author: "Fan LIN"
-date: "2015-2-20"
-output:
-  html_document:
-    keep_md: yes
----
+# README
+Fan LIN  
+2015-2-20  
 ### Submition file include:
 - README.html   # introduction and explain for the application
 - README.Rmd   # introduction and explain for the application
@@ -30,20 +25,20 @@ http://foxet.github.io/ProjectApp-For-Developing-Data-Products/README.html
 ---------------------------------------------------------
 ### Data:
 - The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models)  
-```{r echo=FALSE}
-data(mtcars)
-mtcarsdata<-data.frame(Names=names(mtcars),Description=c("Miles/(US) gallon",
-                                           "Number of cylinders",
-                                           "Displacement (cu.in.)",
-                                           "Gross horsepower",
-                                           'Rear axle ratio',
-                                           'Weight (lb/1000)',
-                                           '1/4 mile time',
-                                           'V/S',
-                                           'Transmission',
-                                           'Number of forward gears',
-                                           'Number of carburetors'))
-mtcarsdata
+
+```
+##    Names             Description
+## 1    mpg       Miles/(US) gallon
+## 2    cyl     Number of cylinders
+## 3   disp   Displacement (cu.in.)
+## 4     hp        Gross horsepower
+## 5   drat         Rear axle ratio
+## 6     wt        Weight (lb/1000)
+## 7   qsec           1/4 mile time
+## 8     vs                     V/S
+## 9     am            Transmission
+## 10  gear Number of forward gears
+## 11  carb   Number of carburetors
 ```
 
 ### Examples:
@@ -52,15 +47,10 @@ mtcarsdata
 - Example: Choose one of the predictor, let's say 'Gross horsepower', and choose 'Add a smoothed condition mean', then click *"PLOT"*. now you can see the plot on the right look just as the plot below:
 
 ![alt text](panel.png)
-```{r echo=FALSE,message=FALSE}
-library(ggplot2)
-qplot(y=mpg,x=hp,data=mtcars,xlab='hp')+geom_smooth()
-```
+![](README_files/figure-html/unnamed-chunk-2-1.png) 
 
 - You can also explore the relationship between MPG and 'Gross horsepower' by different "Number of cylinders. 
 - just select variable on 'Factor panel' now you can the plot as follow:  
 
-```{r echo=FALSE}
-qplot(y=mpg,x=hp,data=mtcars,xlab='hp',color=factor(cyl))+ guides(color=guide_legend(title='cyl'))
-```
+![](README_files/figure-html/unnamed-chunk-3-1.png) 
 
